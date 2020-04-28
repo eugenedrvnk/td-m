@@ -5,10 +5,10 @@
       v-model="filterWord"
     />
     <div 
-      class="list-page__rows"
+      class="list-page__user-items"
       v-if="filteredUsers.length"
     >
-      <ListRow 
+      <UserItem
         v-for="(user, index) in filteredUsers" 
         :key="index"
         :user="user"
@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import ListRow from '@/components/ListPage/ListRow'
+import UserItem from '@/components/ListPage/UserItem'
 
 export default {
-  components: {ListRow},
+  components: {UserItem},
 
   data() {
     return {

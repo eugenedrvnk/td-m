@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ListPage from '../views/ListPage.vue'
+import UserList from '../views/UserList.vue'
 import UserPage from '../views/UserPage'
 
 Vue.use(VueRouter)
@@ -8,7 +8,7 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    component: ListPage
+    component: UserList
   },
   {
     path: '/users/:id',
