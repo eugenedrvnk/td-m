@@ -8,7 +8,7 @@
       :key="index"
     >
       <div class="user-page__row-key">
-        {{ key }} ->
+        {{ key.charAt(0).toUpperCase() + key.slice(1) }}
       </div>
       <div class="user-page__row-value">
         {{ value }}
@@ -32,13 +32,27 @@ export default {
         email: this.user.email,
         gender: this.user.gender,
         birthday: new Date(this.user.dob.date).toDateString(),
-        'phone-number': this.phone
+        'phone-number': this.user.phone
       }
     }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+  .user-page {
+    &__row {
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.137);
+    }
 
+    &__row-key {
+      width: 30%;
+    }
+
+    &__row-value {
+      width: 70%;
+    }
+  }
 </style>
